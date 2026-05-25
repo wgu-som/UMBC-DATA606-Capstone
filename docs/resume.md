@@ -1,3 +1,6 @@
+
+![Headshot](headshot.jpg)
+
 # William Gu
 
 8672 Town and Country Blvd, Ellicott City, MD 21043
@@ -50,5 +53,3 @@ B.S., Computer Science - 2019
  
 ###	Creating Advanced Data Structures
 - Used basic data structures as building blocks to recreate examples of advanced data structures such as AVL-G trees, Binary Patricia tries, and priority queues
-
-![Headshot](headshot.jpg)
