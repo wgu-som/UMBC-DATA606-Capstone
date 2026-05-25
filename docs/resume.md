@@ -3,8 +3,8 @@
 
 # William Gu
 
-8672 Town and Country Blvd, Ellicott City, MD 21043
-williamq.gu@gmail.com
+8672 Town and Country Blvd, Ellicott City, MD 21043  
+williamq.gu@gmail.com  
 (202) 281-5668
 
 ---
