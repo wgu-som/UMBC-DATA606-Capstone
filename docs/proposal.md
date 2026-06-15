@@ -10,7 +10,7 @@
 
 Blood is a valuable resorce in hospitals. There have been several studies dedicated to reviewing restrictive and liberal blood transfusion strategies and those have largely shown that giving patients more blood
 than necessary does not usually improve outcomes. Modern clinical practice focuses on giving the right patient the right amount of blood at the right time, in this way making the most of their resources while still
-saving as many patients as possible. This project will attempt to see if machine learning techniques can aid clinicians in making decisions on whether or not a patient will need blood transfusions based on their vital signs. We will mainly be focusing on the Critical Administration Threshold (CAT) which is defined as the usage of 3 or more units of packed red blood cells (PRBCs) within 1 hour. CAT has historically been used as a way to identify critically bleeding patients so we would like to see if our machine learning process can distinguish a CAT patient vs a non CAT patient.
+saving as many patients as possible. This project will attempt to see if machine learning techniques can aid clinicians in making decisions on whether or not a patient will need blood transfusions based on their vital signs. We will mainly be focusing on the Critical Administration Threshold (CAT) which is defined as the usage of 3 or more units of packed red blood cells (PRBCs) within 1 hour. CAT has historically been used as a way to identify critically bleeding patients so we would like to see if our machine learning process can distinguish a CAT patient vs a non CAT patient. If time allows, I would also like to see if the model can predict whether a patient will receive any amount of blood (not just CAT).
 
 ## Data
 
