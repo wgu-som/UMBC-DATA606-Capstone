@@ -40,7 +40,7 @@ pct_gtX - Float; Percentage of time [vital sign] were greater than X
 pct_ltX - Float; Percentage of time [vital sign] were less than X  
 Dose_gtX - Float; Area above the curve of the percentage of time [vital sign] were greater than X  
 Dose_ltX - Float; Area above the curve of the percentage of time [vital sign] was less than X  
-ShannonEntropy Float; Shannon entropy measurement of uncertainty/randomness in [vital sign]  
+ShannonEntropy - Float; Shannon entropy measurement of uncertainty/randomness in [vital sign]  
 
 The following features are shared over the waveform vital signs (ECG2w, PPGw) in the form [vital sign]_[feature] (ex. ECG2w_meanNN)  
 meanNN - Float; Mean Normal-to-Normal in [vital sign] (mean time between consecutive normal R-waves)  
