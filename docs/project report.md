@@ -18,54 +18,71 @@ For this project, we will use a deidentified dataset of 1202 patients data in th
 ### Data Dictionary  
 
 #### Identifier and Targets:   
-id - String; Number that represents each patient in the form P2_XXXX  
-CAT - **Target variable** String; YES if patient met CAT, NO if not  
-Any Blood - **Target variable** String; YES if patient recieved any amount of blood, NO if not  
+| Name | Data Type | Description|
+|------|-----------|------------|
+| id | String | Number that represents each patient in the form P2_XXXX |  
+| CAT | String | **Target variable** YES if patient met CAT, NO if not |  
+| Any Blood | String | **Target variable** YES if patient recieved any amount of blood, NO if not |  
 
 #### Features:  
 The following features are shared over all trend vital signs (HR, SPO2p, SBP, MBP, DBP, RESP, SI, PP) in the form [vital sign]_[feature] (ex. HR_Mean)   
-Mean - Float; Numerical average of [vital sign]  
-STD - Float; Standard deviation of [vital sign]   
-Variance - Float; Variance of [vital sign]   
-Min - Int; Lowest value of [vital sign]   
-Max - Int; Highest value of [vital sign]   
-CoeffOfVar - Float; Coefficient of Variance of [vital sign]   
-10pctl/20pctl.../90pctl - Float; 10th through 90th percentiles of [vital sign]   
-1stquartile - Float; 1st quartile of [vital sign]   
-3rdquartile - Float; 3rd quartile of [vital sign]   
-IQR - Float; Interquartile range of [vital sign] (3rd quartile - 1st quartile)  
-Skewness - Float; Skewness of [vital sign] (Asymmetry of the probability distribution about its mean)  
-Kurtosis - Float; Kurtosis of [vital sign] (Degree of tailedness in the probability distribution)  
-pct_gtX - Float; Percentage of time [vital sign] were greater than X  
-pct_ltX - Float; Percentage of time [vital sign] were less than X  
-Dose_gtX - Float; Area above the curve of the percentage of time [vital sign] were greater than X  
-Dose_ltX - Float; Area above the curve of the percentage of time [vital sign] was less than X  
-ShannonEntropy - Float; Shannon entropy measurement of uncertainty/randomness in [vital sign]  
+| Name | Data Type | Description|
+|------|-----------|------------|
+|Mean | Float | Numerical average of [vital sign] |  
+|STD | Float | Standard deviation of [vital sign] |   
+|Variance | Float| Variance of [vital sign] |   
+|Min | Int | Lowest value of [vital sign] |  
+|Max | Int | Highest value of [vital sign] |   
+|CoeffOfVar | Float| Coefficient of Variance of [vital sign] |  
+|10pctl/20pctl.../90pctl | Float| 10th through 90th percentiles of [vital sign] |  
+|1stquartile | Float| 1st quartile of [vital sign] |  
+|3rdquartile | Float| 3rd quartile of [vital sign] |  
+|IQR | Float| Interquartile range of [vital sign] (3rd quartile - 1st quartile) | 
+|Skewness | Float | Skewness of [vital sign] (Asymmetry of the probability distribution about its mean) | 
+|Kurtosis | Float | Kurtosis of [vital sign] (Degree of tailedness in the probability distribution) | 
+|pct_gtX | Float | Percentage of time [vital sign] were greater than X  |
+|pct_ltX | Float| Percentage of time [vital sign] were less than X  |
+|Dose_gtX | Float| Area above the curve of the percentage of time [vital sign] were greater than X | 
+|Dose_ltX | Float| Area above the curve of the percentage of time [vital sign] was less than X  |
+|ShannonEntropy | Float| Shannon entropy measurement of uncertainty/randomness in [vital sign]  |  
+
+<br>
 
 The following features are shared over the waveform vital signs (ECG2w, PPGw) in the form [vital sign]_[feature] (ex. ECG2w_meanNN)  
-meanNN - Float; Mean Normal-to-Normal in [vital sign] (mean time between consecutive normal R-waves)  
-minNN - Float; Lowest Normal-to-Normal in [vital sign]  
-maxNN - Float; Highest Normal-to-Normal in [vital sign]  
+| Name | Data Type | Description|
+|------|-----------|------------|
+|meanNN | Float| Mean Normal-to-Normal in [vital sign] (mean time between consecutive normal R-waves)|  
+|minNN | Float| Lowest Normal-to-Normal in [vital sign]  |
+|maxNN | Float| Highest Normal-to-Normal in [vital sign]  |
+  
+<br>
 
 The following features are also shared over waveform vital signs, but are different algorithms for Heart Rate Variability (welch, lomb, ar) in the form [vital sign]\_FD\_[algorithm]_[feature] (ex. ECG2w_FD_welch_avlf)   
-avlf - Float; Frequency Domain of [algorithm]'s power spectral density estimation at very low frequency  
-alf - Float; Frequency Domain of [algorithm]'s power spectral density estimation at low frequency  
-atotal - Float; Frequency Domain of average total power extracted using [algorithm] power spectral density estimation  
-pkslf - Float; Frequency Domain of low frequency peaks extracted using [algorithm] power spectral density estimation  
-nlf - Float; Frequency Domain of normalized low frequency extracted using [algorithm] power spectral density estimation  
+| Name | Data Type | Description|
+|------|-----------|------------|
+|avlf | Float| Frequency Domain of [algorithm]'s power spectral density estimation at very low frequency  |
+|alf | Float| Frequency Domain of [algorithm]'s power spectral density estimation at low frequency  |
+|atotal | Float| Frequency Domain of average total power extracted using [algorithm] power spectral density estimation  |
+|pkslf | Float| Frequency Domain of low frequency peaks extracted using [algorithm] power spectral density estimation  |
+|nlf | Float| Frequency Domain of normalized low frequency extracted using [algorithm] power spectral density estimation  |
+  
+<br>
 
-The following features are shared between waves (QRise, RSfall) in the form [wave]_[feature] (ex. QRise_time_min)   
-time_min - Float; Minimum [wave] wave polariation time  
-time_max - Float; Maximum  [wave] wave polarization time  
-time_1stquatile - Float; First Quartile of [wave] wave polarization time density distribution  
-time_2ndquatile - Float; Second Quartile of [wave] wave polarization time density distribution  
-time_3rdquatile - Float; Third Quartile of [wave] wave polarization time density distribution  
-amp_min - Float; [wave] wave minimum amplitude  
-amp_max - Float; [wave]  wave maximum amplitude  
-amp_1stquatile - Float; First Quartile of [wave] wave amplitude density distribution  
-amp_2ndquatile - Float; Second Quartile of [wave] wave amplitude density distribution  
-amp_3rdquatile - Float; Third Quartile of [wave] wave amplitude density distribution  
+The following features are shared between waves (QRrise, RSfall) in the form [wave]_[feature] (ex. QRise_time_min)   
+| Name | Data Type | Description|
+|------|-----------|------------|
+|time_min | Float| Minimum [wave] wave polariation time  |
+|time_max | Float| Maximum  [wave] wave polarization time  |
+|time_1stquatile | Float| First Quartile of [wave] wave polarization time density distribution  |
+|time_2ndquatile | Float| Second Quartile of [wave] wave polarization time density distribution  |
+|time_3rdquatile | Float| Third Quartile of [wave] wave polarization time density distribution  |
+|amp_min | Float| [wave] wave minimum amplitude  |
+|amp_max | Float| [wave]  wave maximum amplitude  |
+|amp_1stquatile | Float| First Quartile of [wave] wave amplitude density distribution  |
+|amp_2ndquatile | Float| Second Quartile of [wave] wave amplitude density distribution  |
+|amp_3rdquatile | Float| Third Quartile of [wave] wave amplitude density distribution  |
 
+<br>
 
 ## References
 
